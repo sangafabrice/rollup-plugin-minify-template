@@ -1,0 +1,16 @@
+/** @flow */
+
+import type { Extension } from "minify-kit";
+import type { Plugin } from "./rollup.js.flow";
+export type { Plugin } from "./rollup.js.flow";
+
+export type OptionExtension = ReadonlyArray<Extension> | Extension;
+
+/***
+ * Creates a Rollup plugin that minifies imported source files
+ * during the build process.
+ * @param options - The plugin configuration options.
+ * @param options.extensions - The extensions of source files to minify.
+ * @returns The Rollup plugin object.
+ */
+declare export default function minifyTemplate(options?: { extensions: OptionExtension }): Plugin;
