@@ -10,7 +10,7 @@
   "type": "module",
   "dependencies": {
     "minify-kit": "github:sangafabrice/minify-kit",
-    "rollup": "^4.54.0",
+    "rollup": "^4.55.1",
     "rollup-plugin-string": "^3.0.0"
   }
 }
