@@ -1,29 +1,32 @@
 /** @flow */
 declare namespace ESTree {
-	type Program = any;
+    type Program = any;
 }
 
 type SourceMap = { mappings: string } | null;
 
 interface SourceDescription {
-	code: string | Promise<string>;
-	map?: string | SourceMap;
-	ast?: ESTree.Program;
-	attributes?: { [key: string]: string } | null;
-	meta?: { [plugin: string]: any } | null;
-	moduleSideEffects?: boolean | 'no-treeshake' | null;
-	syntheticNamedExports?: boolean | string | null;
+    code: string | Promise<string>;
+    map?: string | SourceMap;
+    ast?: ESTree.Program;
+    attributes?: { [key: string]: string } | null;
+    meta?: { [plugin: string]: any } | null;
+    moduleSideEffects?: boolean | "no-treeshake" | null;
+    syntheticNamedExports?: boolean | string | null;
 }
 
-type TransformResult = string | null | Partial<SourceDescription>;
+type TransformResult =
+    | string
+    | null
+    | Partial<SourceDescription>;
 
 export type Plugin = {
-	/** @see {@link https://rollupjs.org/plugin-development/#name name property} */
-	name: string,
+    /** @see {@link https://rollupjs.org/plugin-development/#name name property} */
+    name: string,
 
-	/** @see {@link https://rollupjs.org/plugin-development/#version version property} */
-	version?: string,
+    /** @see {@link https://rollupjs.org/plugin-development/#version version property} */
+    version?: string,
 
-	/** @see {@link https://rollupjs.org/plugin-development/#transform transform hook} */
-	transform(code: string, id: string): TransformResult
-}
+    /** @see {@link https://rollupjs.org/plugin-development/#transform transform hook} */
+    transform(code: string, id: string): TransformResult
+};
