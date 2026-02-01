@@ -12,7 +12,7 @@ interface SourceDescription {
     attributes?: { [key: string]: string } | null;
     meta?: { [plugin: string]: any } | null;
     moduleSideEffects?: boolean | "no-treeshake" | null;
-    syntheticNamedExports?: boolean | string | null;
+    syntheticNamedExports?: boolean | string | null
 }
 
 type TransformResult =
