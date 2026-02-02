@@ -1,6 +1,6 @@
-import minify from "minify-kit";
-import { matchesGlob, extname } from "node:path";
+import { extname, matchesGlob } from "node:path";
 import { name, version } from "./package.js";
+import minify from "minify-kit";
 const defaultExtensions = [".html", ".css"];
 function globifyExtensions(extensions) {
   extensions = [extensions].flat();
