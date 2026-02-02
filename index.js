@@ -1,12 +1,14 @@
 /** @flow */
-import minify from "minify-kit";
+// $FlowFixMe[cannot-resolve-module]
+import { extname, matchesGlob } from "node:path";
+import { name, version } from "./package.js";
 import type { Extension } from "minify-kit";
 import type { Plugin } from "./rollup.js.flow";
+// eslint-disable-next-line no-duplicate-imports
+import minify from "minify-kit";
 export type { Plugin } from "./rollup.js.flow";
-// $FlowFixMe[cannot-resolve-module]
-import { matchesGlob, extname } from "node:path";
-import { name, version } from "./package.js";
 
+// eslint-disable-next-line no-undef
 type ExtensionArray = ReadonlyArray<Extension>;
 
 export type OptionExtension = ExtensionArray | Extension;
