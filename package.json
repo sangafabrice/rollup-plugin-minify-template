@@ -11,5 +11,10 @@
     "minify-kit": "github:sangafabrice/minify-kit",
     "rollup": "^4.57.1",
     "rollup-plugin-string": "^3.0.0"
+  },
+  "exports": {
+    "require": "./index.cjs",
+    "import": "./index.js",
+    "default": "./index.js"
   }
 }
