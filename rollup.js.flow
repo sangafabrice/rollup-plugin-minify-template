@@ -1,14 +1,12 @@
 /** @flow */
-declare namespace ESTree {
-    type Program = any;
-}
+type ESTreeProgram = any;
 
 type SourceMap = { mappings: string } | null;
 
 interface SourceDescription {
     code: string | Promise<string>;
     map?: string | SourceMap;
-    ast?: ESTree.Program;
+    ast?: ESTreeProgram;
     attributes?: { [key: string]: string } | null;
     meta?: { [plugin: string]: any } | null;
     moduleSideEffects?: boolean | "no-treeshake" | null;
